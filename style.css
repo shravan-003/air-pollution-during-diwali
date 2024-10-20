@@ -1,0 +1,338 @@
+/* General styles */
+body {
+    font-family: 'Times New Roman', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFDF2;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header 
+   /* General Reset for Margin and Padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure full height for the header section */
+header {
+    height: 100vh; /* Full viewport height */
+    background: url('air-pollution.jpg') no-repeat center center/cover; /* Full-cover image */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    
+}
+
+/* Add some styling for the header content */
+header h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+header h3 {
+    font-size: 2rem;
+    color:white;
+    font-size: 120%;
+}
+
+/* Ensure there's scrolling for the remaining sections */
+section {
+    padding: 40px;
+}
+
+/* Adjust images in the sections */
+#introduction-image img, #pollution-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay for better text visibility */
+    z-index: 1;
+}
+
+header h1, header p {
+    position: relative; /* Keep text above the background image */
+    z-index: 2;
+}
+
+
+/* Section styling */
+section {
+    padding: 40px 60px;
+    margin: 30px auto;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+section h2 {
+    color: #0f9b0f;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+section p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+ul li:before {
+    content: '✔';
+    color: #0f9b0f;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Buttons */
+button {
+    background-color: #00a8ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #007bbf;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: static;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    section {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+}
+
+#pollution-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 20px;
+}
+
+#pollution-image {
+    flex: 1; /* Adjust the size of the image container */
+}
+
+#pollution-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#pollution-effects {
+    flex: 4; /* Allow the text section to take more space */
+}
+
+#pollution-effects h2 {
+    color: #0f9b0f;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+#pollution-effects p, #pollution-effects ul {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+#pollution-effects ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#pollution-effects ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+#pollution-effects ul li:before {
+    content: '✔';
+    color: #0f9b0f;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+
+/* Style for the introduction section */
+#introduction {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Style for the introduction text */
+#introduction h2 {
+    flex: 1 1 50%;
+    font-size: 2.5em;
+}
+
+#introduction p {
+    flex: 1 1 60%;
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+/* Style for the image */
+#introduction-image {
+    flex: 1 1 35%;
+    text-align: center;
+}
+
+#introduction-image img {
+    max-width: 55%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Ensure the layout adapts well on smaller screens */
+@media (max-width: 768px) {
+    #introduction {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #introduction-image {
+        margin-top: 20px;
+    }
+}
+
+
+#effects-container {
+    display: flex;
+    align-items: center; /* Align items at the start */
+    margin: 20px 0; /* Optional: add some margin for spacing */
+}
+
+#effects-container img {
+    width: 300px; /* Set the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between the image and text */
+    border-radius: 15px; /* Apply rounded corners */
+}
+
+
+
+#pollutants-container {
+    display: flex;
+    align-items: center; /* Align items at the start */
+    margin: 20px 0; /* Optional: add some margin for spacing */
+}
+
+#pollutants-container img {
+    width: 300px; /* Set the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between the image and text */
+    border-radius: 15px; /* Apply rounded corners */
+}
+
+#prevent-container {
+    display: flex;
+    align-items: center; /* Align items at the start */
+    margin: 20px 0; /* Optional: add some margin for spacing */
+}
+
+#prevent-container img {
+    width: 300px; /* Set the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between the image and text */
+    border-radius: 15px; /* Apply rounded corners */
+}
